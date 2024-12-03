@@ -1,7 +1,7 @@
-FROM node:12.16
+FROM ubuntu
 RUN apt-get -y update && \
     apt-get -y upgrade && \
-    apt-get install -y ffmpeg && \
+    apt-get install -y nodejs npm ffmpeg && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /home/node/app
 COPY package*.json ./
